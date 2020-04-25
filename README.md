@@ -40,7 +40,7 @@ This is used in the demonstration of development of Ansible Playbooks.
         
   - Insert some test data
         
-        mysql> INSERT INTO employees VALUES ('JOHN');
+        mysql> INSERT INTO employees VALUES ('KAZA');
     
 ## 4. Install and Configure Web Server
 
@@ -64,4 +64,4 @@ Open a browser and go to URL
 
     http://<IP>:5000                            => Welcome
     http://<IP>:5000/how%20are%20you            => I am good, how about you?
-    http://<IP>:5000/read%20from%20database     => JOHN
+    http://<IP>:5000/read%20from%20database     => KAZA
