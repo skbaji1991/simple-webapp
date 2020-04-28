@@ -1,3 +1,4 @@
 [Applicaion]
 app ansible_host=172.31.2.86 ansible_user=ec2-user ansible_ssh_pass=qwer
 app2 ansible_host=172.31.2.87 ansible_user=ec2-user ansible_ssh_pass=qwer
+app3 ansible_host=172.31.2.88 ansible_user=ec2-user ansible_ssh_pass=qwer
