@@ -23,7 +23,15 @@
           with_items:
             - "mysql-server"
             - "mysql-devel"
-
+           
+        - name: create MySQL configuration file
+          copy:
+            content: |
+              [client]
+               user=root
+               password="@targ8et"
+            dest: "/etc/.my.cnf"
+        
         - name: Start Mysql Database
           service:
             name: mysqld
