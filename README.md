@@ -22,7 +22,9 @@ This is used in the demonstration of development of Ansible Playbooks.
     
  Install MySQL database
     
-    apt-get install -y mysql-server mysql-client
+    apt-get install -y mysql-server mysql-client     
+ or
+   ``` https://asvignesh.in/install-mysql-on-amazon-linux-in-aws-ec2/ ```
 
 ## 3. Start Database Service
   - Start the database service
