@@ -1,0 +1,25 @@
+---
+- name: "Deploying Python app"
+  hosts: docker
+  become: yes
+  tasks:
+    - name:  "Install Required Python Packges"
+      yum:
+        name: ['python', 'python-devel', 'python-pip']
+        state: present
+
+    - name: "Installing Mysql Community Rpm"
+      yum:
+        name: https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
+        state: present
+
+    - name: "Install Mysql Server and client"
+      yum:
+        name: ['mysql-server','mysql-devel']
+        state: present
+
+    - name: "Starting mysql Service"
+      service:
+        name: mysqld
+        state: started
+        enabled: yes
