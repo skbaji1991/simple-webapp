@@ -9,6 +9,7 @@
 $ansible -i ec2.py  ap-south-1a --list-hosts -vvvv
 
 
-
+$ansible -i ./inventory/ec2.py --limit "tag_App_backend:&tag_Environment_staging:&tag_Usage_clock_worker" -m ping all
+$ansible-playbook -i ./inventory/ec2.py --limit "tag_App_backend:&tag_Environment_staging:&tag_Usage_clock_worker" deploy.yml
 
 
