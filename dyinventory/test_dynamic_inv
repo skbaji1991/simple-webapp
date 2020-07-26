@@ -13,4 +13,3 @@ $ansible -i ./inventory/ec2.py --limit "tag_App_backend:&tag_Environment_staging
 $ansible-playbook -i ./inventory/ec2.py --limit "tag_App_backend:&tag_Environment_staging:&tag_Usage_clock_worker" deploy.yml
 
 
-kaza
