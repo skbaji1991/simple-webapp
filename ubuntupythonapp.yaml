@@ -1,0 +1,53 @@
+---
+- name: Deploying Python APP in Ubutu
+  become: yes
+  hosts: Ubuntugroup
+  tasks:
+    - name: Updating Operating Syste
+      shell: apt-get update -y
+
+    - name: Installing Python services
+      apt:
+        name: ['python','python-setuptools','python-dev','build-essential','python-pip','python-mysqldb']
+        state: present
+
+    - name: Instlling mysqldb
+      apt:
+        name: ['mysql-server','mysql-client']
+        state: present
+
+
+    - name: Starting Mysql Service
+      service:
+        name: mysql
+        state: started
+        enabled: yes
+
+    - name: Installing Flask pip
+      shell: pip install flask
+
+    - name: Installing Flask mysql
+      shell: pip install flask-mysql
+
+    - name: Creating database
+      shell: mysql -e "create database employee_db;"
+
+    - name: createing DB user
+      shell: mysql -e "GRANT ALL ON *.* to db_user@'%' IDENTIFIED BY 'Passw0rd';"
+
+    - name: copying DB backup File
+      copy:
+        src: employees.sql
+        dest: /opt/employees.sql
+
+    - name: Importing DB backup file to Database
+      shell: mysql employee_db < /opt/employees.sql
+
+    - name: copying app.py to Destion
+      copy:
+        src: app.py
+        dest: /opt/app.py
+
+
+    - name: Starting Flask Service
+      shell: FLASK_APP=/opt/app.py nohup flask run --host=0.0.0.0 &
