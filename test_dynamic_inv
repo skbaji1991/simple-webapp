@@ -1,0 +1,14 @@
+
+
+[root@ansible ansible]# EC2_INI_PATH=/root/ec2.ini
+[root@ansible ansible]# ANSIBLE_INVENTORY=/root/ec2.py
+[root@ansible ansible]# pip install -r requirements.txt
+
+[root@ansible inventory]# ansible -m ping tag_Name_Ansible_Master -i ec2.py
+
+$ansible -i ec2.py  ap-south-1a --list-hosts -vvvv
+
+
+
+
+
