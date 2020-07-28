@@ -20,6 +20,7 @@ stages {
         stage('Checkout'){
             steps {
                 sh "echo checkout code"
+		git 'https://github.com/kaza514/simple-webapp.git'
             }
         }
 
