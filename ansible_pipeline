@@ -1,6 +1,8 @@
 pipeline {
 
-    agent any
+    agent {
+        label 'ansibleslave'
+    }
 
     parameters {
         choice(choices: ['no', 'yes'], description: 'Deploy Ansible ?', name: 'deploy_code')
@@ -36,6 +38,7 @@ stages {
             }
             steps {
                  echo 'Enter the Stepts to Publish the code'
+		 sh 'hostname'
                  echo 'ansible --version'
             }
         }
