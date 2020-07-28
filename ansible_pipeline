@@ -41,7 +41,7 @@ stages {
 		 sh 'hostname'
                  sh 'ansible --version'
 		 sh 'ls -l'
-		 sh 'ansible all -m ping'
+		 sh 'ansible -i inventory all -m ping'
             }
         }
 
