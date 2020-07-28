@@ -39,7 +39,9 @@ stages {
             steps {
                  echo 'Enter the Stepts to Publish the code'
 		 sh 'hostname'
-                 echo 'ansible --version'
+                 sh 'ansible --version'
+		 sh 'ls -l'
+		 sh 'ansible all -m ping'
             }
         }
 
