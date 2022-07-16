@@ -2,3 +2,8 @@
 jenkins ansible_host=172.31.34.55 ansible_user=ec2-user ansible_ssh_pass=qwer
 ansible ansible_host=172.31.47.68 ansible_user=ec2-user ansible_ssh_pass=qwer
 #docker ansible_host=172.31.45.245 ansible_user=ec2-user ansible_ssh_pass=qwer
+
+
+[webserver]
+172.31.19.29   ansible_ssh_user=ubuntu   ansible_ssh_private_key_file=/root/ganeshkey.pem 
+172.31.17.199   ansible_ssh_user=ubuntu   ansible_ssh_private_key_file=/root/ganeshkey.pem
