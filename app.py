@@ -12,7 +12,7 @@ mysql_database_host = 'MYSQL_DATABASE_HOST' in os.environ and os.environ['MYSQL_
 app.config['MYSQL_DATABASE_USER'] = 'db_user'
 app.config['MYSQL_DATABASE_PASSWORD'] = 'Passw0rd'
 app.config['MYSQL_DATABASE_DB'] = 'employee_db'
-app.config['MYSQL_DATABASE_HOST'] = mysql_database_host
+app.config['MYSQL_DATABASE_HOST'] = 'mysql_database_host'
 mysql.init_app(app)
 
 conn = mysql.connect()
