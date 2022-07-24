@@ -3,6 +3,7 @@
 #cd /opt/
 
 #FLASK_APP=/opt/app.py 
+cd /var/lib/jenkins/workspace/Flask_deployment/
 
 FLASK_APP=app.py
 
