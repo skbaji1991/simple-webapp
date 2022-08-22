@@ -25,7 +25,7 @@ def main():
 
 @app.route('/how are you')
 def hello():
-    return 'I am good, how about you?'
+    return 'i am fine, I am good, how about you?'
 
 @app.route('/read from database')
 def read():
